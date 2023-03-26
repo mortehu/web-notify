@@ -158,7 +158,7 @@ int main() {
         return crow::response(200);
       });
 
-  app.port(19324).multithreaded().run();
+  app.port(19324).concurrency(1).run();
 
   XCloseDisplay(display);
 
